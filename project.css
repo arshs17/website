@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Figtree', sans-serif;
+    background-color: #fdfdfd;
+    color: #222;
+}
+
+/* Layout */
+#page-wrapper {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+/* Nav Bar */
+nav {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar {
+    list-style: none;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 1.2rem;
+    font-size: 18px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: width 0.3s;
+    margin: 4px auto 0;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.first {
+    text-align: center;
+    max-width: 700px; /* or whatever width you want */
+    word-wrap: break-word;
+    margin-right: auto;
+    padding: 20px;
+
+
+}
+.second {
+    text-align: right;
+    max-width: 400px; /* or whatever width you want */
+    word-wrap: break-word;
+    margin-left: auto; /* This pushes it to the right */
+    padding: 20px;
+
+}
+
+.card {
+    width: 1000px;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid black;
+    position: relative;
+    margin: 3rem auto;
+}
+
+/* Cover that appears first (gray background with title) */
+.card-cover {
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 3s ease;
+}
+
+.card-cover h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+/* Hidden body that slides in on hover */
+.card-body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: right 1.5s ease;
+    z-index: 3;
+    color: white;
+}
+
+.card-body2 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: left 1.5s ease;
+    z-index: 3;
+    color: white;
+}
+
+.card:hover .card-body2 {
+    left: 0;
+}
+
+.card-sub-title{
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+}
+.card:hover .card-body {
+    right: 0;
+}
+
+.card:hover .card-cover {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Optional if you still want to use images in the future */
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Figtree', sans-serif;
+
+}
+
+.card-title3 {
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 500;
+    font-family: 'Figtree', sans-serif;
+
+}
+
+.card-sub-title {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.card-info {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 40px 0;
+    font-weight: 400;
+}
+
+.card-info2 {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 30px 0;
+    font-weight: 400;
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #e0e0e0;
+    font-size: 18px;
+
+}
+
+footer p {
+    color: #6c757d;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+#backtotop {
+    display: none; /* start hidden */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+button{
+    margin-bottom: 1vh;
+}
+
+button{
+    background-color: white;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    color: white;
+    padding: 0.5%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: #2c3e50;
+}
+button:hover {
+    background-color: lightblue;
+    color: black;
+}
+
