@@ -203,6 +203,7 @@ footer a {
 .skill-card:hover {
     transform: translateY(-6px);
     background-color: lightblue;
+    cursor: pointer;
 }
 
 .skill-card highlight {
@@ -287,13 +288,13 @@ footer a {
     opacity: 1;
     transform: translateY(0);
 }
-button{
+#backtotop{
     margin-bottom: 1vh;
 }
 header{
     text-align: center;
 }
-button{
+#backtotop{
     background-color: white;
     border: 2px solid #2c3e50;
     border-radius: 10px;
@@ -303,7 +304,24 @@ button{
     transition: all 0.3s ease-in-out;
     color: #2c3e50;
 }
-button:hover {
+
+button[id^="close"],
+button.close-modal {
+    background-color: white;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: #2c3e50;
+}
+
+button[id^="close"]:hover,
+button.close-modal:hover {
+    background-color: lightblue;
+}
+
+#backtotop:hover {
     background-color: lightblue;
     color: black;
 }
@@ -317,6 +335,76 @@ button:hover {
 .container{
     border-bottom: 1px solid #e0e0e0;
 }
+
+.modal-container p{
+    padding: 90px;
+    color: #2c3e50;
+}
+
+button[id^="open"] {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-size: 1em;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+
+.modal-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.2); /* light fade */
+}
+
+.modal{
+    width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    padding: 30px 50px;
+    max-width: 100%;
+    text-align: center;
+    transform: scale(0.95);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    background-color: white;  /* ← make background solid */
+
+
+}
+
+.modal-container.show{
+    pointer-events: auto;
+    opacity: 1;
+
+}
+
+.modal h1{
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    color: #2c3e50;
+
+}
+
+.modal p{
+    font-size: 17px;
+    opacity: 0.7;
+}
+
+
+
 
 
 /* Responsive */

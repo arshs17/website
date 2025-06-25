@@ -66,37 +66,38 @@
         <section class="skills-section animated">
             <h2>My Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Leadership</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>Analytical Thinking</h3>
-                </div>
-                <div class="skill-card highlight">
-                    <h3>Adaptability</h3>
-                </div>
-                <div class="skill-card highlight">
-                    <h3>Communication</h3>
-                </div>
+                <button id="open">
+                    <div class="skill-card">Leadership</div>
+                </button>
+                <button id="open-analytical">
+                    <div class="skill-card">Analytical Thinking</div>
+                </button>
+                <button id="open-adaptability">
+                    <div class="skill-card highlight">Adaptability</div>
+                </button>
+                <button id="open-communication">
+                    <div class="skill-card highlight">Communication</div>
+                </button>
             </div>
         </section>
 
-        <section class="skills-section2 ">
+        <section class="skills-section2">
             <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Initiative</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>Technical Storytelling</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>Cross-Functional Collaboration</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>Resilience</h3>
-                </div>
+                <button id="open-initiative">
+                    <div class="skill-card">Initiative</div>
+                </button>
+                <button id="open-storytelling">
+                    <div class="skill-card">Technical Storytelling</div>
+                </button>
+                <button id="open-collab">
+                    <div class="skill-card">Cross-Functional Collaboration</div>
+                </button>
+                <button id="open-resilience">
+                    <div class="skill-card">Resilience</div>
+                </button>
             </div>
         </section>
+
 
     </main>
 
@@ -104,6 +105,71 @@
     <footer>
         <p>© 2025 Arsh Sharma</p>
     </footer>
+    <div class="modal-container" id="modal_container">
+        <div class="modal">
+            <h1>Leadership</h1>
+            <p>Leadership has always been a part of who I am, whether that’s been through serving as Treasurer for the BU Cybersecurity Association, captaining my Speech & Debate team, or coordinating events and initiatives that brought people together. These experiences have taught me how to lead with purpose, stay composed under pressure, and help teams succeed.
+            </p>
+            <button id="close">
+                Close
+            </button>
+        </div>
+    </div>
+    <div class="modal-container" id="modal-analytical">
+        <div class="modal">
+            <h1>Analytical Thinking</h1>
+            <p>My analytical thinking is rooted in applying Python and data science to uncover trends and actionable insights, from financial modeling in internships to building machine learning pipelines in research, and even visualizing data from my favorite sports team.</p>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <div class="modal-container" id="modal-adaptability">
+        <div class="modal">
+            <h1>Adaptability</h1>
+            <p>I thrive in dynamic environments, having adapted to new technologies like AWS, Git, and OpenCV while working across both business and engineering-focused roles, not to mention my ability to adjust on ever bigger scales, such as transferring colleges my freshman year. These experiences have molded my ability to adapt in any situation, no matter how big or small.</p>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <div class="modal-container" id="modal-communication">
+        <div class="modal">
+            <h1>Communication</h1>
+            <p>Strong communication has been a cornerstone of my growth. As captain of my Speech and Debate team and now as a core member of BU’s cybersecurity club, I’ve honed the ability to clearly convey complex ideas, whether speaking publicly/debating, leading meetings, or collaborating with diverse technical teams.</p>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <div class="modal-container" id="modal-initiative">
+        <div class="modal">
+            <h1>Initiative</h1>
+            <p>I’ve consistently sought out opportunities beyond the classroom, from building my own fake news detector in Python to joining hands-on engineering teams like the F1 project. I’m driven by a desire to innovate, lead, and push boundaries.</p>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <div class="modal-container" id="modal-storytelling">
+        <div class="modal">
+            <h1>Technical Storytelling</h1>
+            <p>Translating technical work into compelling, understandable narratives has been essential in both academic and leadership roles. Whether explaining cybersecurity risks to non-technical audiences or crafting persuasive data-driven project pitches, I ensure everyone around me can resonate to the information being discussed.</p>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <div class="modal-container" id="modal-collab">
+        <div class="modal">
+            <h1>Cross-Functional Collaboration</h1>
+            <p>From working with developers, analysts, and engineers in internships to coordinating with business-minded peers in student organizations, I’ve grown adept at working across roles and departments to achieve shared goals.</p>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <div class="modal-container" id="modal-resilience">
+        <div class="modal">
+            <h1>Resilience</h1>
+            <p>Resilience is something that’s been ingrained in me from a young age. Through countless failures and setbacks, and by understanding my roots and how little my parents came from, I’ve learned that true success is only possible through perseverance, grit, and an unwavering commitment to growth.</p>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
     <script src="index.js"></script>
 
 </div>
